@@ -25,31 +25,35 @@ const posts = [
     {
         title: 'ciambellone',
         content: 'ciambella con una tazzina di caffè',
-        img: 'images/ciambellone.jpeg',
+        img: '/images/ciambellone.jpeg',
         tags: ['zucchero', 'tazzina', 'piattino bianco']
     },
     {
         title: 'cracker barbabietola',
         content: 'crackers alla barbabietola e una mozzarella',
-        img: 'images/cracker_barbabietola.jpeg',
+        img: '/images/cracker_barbabietola.jpeg',
         tags: ['tovaglietta viole', 'ripiano di legno con presa']
     },
     {
         title: 'pane fritto dolce',
         content: 'fette di pane fritto dolce messe su un vassoio di ceramica',
-        img: 'images/pane_fritto_dolce.jpeg',
-        tags: ['sugar', 'cup', 'white dish']
+        img: '/images/pane_fritto_dolce.jpeg',
+        tags: ['pane fritto dolce', 'vassoio di ceramica', 'tovaglietta gialla']
     },
     {
         title: 'pasta barbabietola',
-        content: 'donut with a cup of coffee',
-        img: 'images/ciambellone.jpeg',
-        tags: ['sugar', 'cup', 'white dish']
+        content: 'pasta al gusto barbabietola con piatto in ceramica nero e del condimento',
+        img: '/images/pasta_barbabietola.jpeg',
+        tags: ['pasta', 'barbabietola', 'piatto nero']
     },
     {
         title: 'torta paesana',
-        content: 'donut with a cup of coffee',
-        img: 'images/ciambellone.jpeg',
-        tags: ['sugar', 'cup', 'white dish']
-    },
+        content: 'torta con guarnizione gialla appoggiata su un ripiano di legno',
+        img: '/images/torta_paesana.jpeg',
+        tags: ['torta', 'ripiano di legno', 'guarnizione gialla']
+    }
 ]
+
+app.get('/bacheca', (req, res) => {
+    res.json(posts)
+})
